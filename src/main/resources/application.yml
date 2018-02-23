@@ -1,0 +1,20 @@
+# Tomcat
+server:
+    tomcat:
+        uri-encoding: UTF-8
+        max-threads: 1000
+        min-spare-threads: 30
+    port: 8081
+    connection-timeout: 5000
+    context-path: /swagger
+spring:
+    devtools:
+        restart: false
+        #热部署生效
+        enabled: true
+        #设置重启的目录
+    resources: #指定静态资源的路径
+        static-locations: classpath:/static/,classpath:/views/,classpath:/META-INF/resources/
+        cache-period: 600  #静态资源的缓存失效时间,秒
+swagger:
+    enable: true
